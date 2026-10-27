@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KOSOKO | Sneaker Discovery</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+
+        <h1 class="logo">KOSOKO</h1>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#shoes">Shoes</a>
+            <a href="#brands">Brands</a>
+            <a href="#about">About</a>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <!-- Welcome Section -->
+        <section class="hero">
+
+            <h2>Feet deserves fashion.</h2>
+
+            <p>A place where fashion is for our BELOVED feets.</p>
+
+        </section>
+
+
+        <!-- Shoe Collection -->
+        <section class="shoes-section" id="shoes">
+
+            <h2>Shoes we're loving.</h2>
+
+            <!-- Search Bar -->
+            <div class="search-container">
+
+                <input
+                    type="text"
+                    id="shoe-search"
+                    placeholder="Search your favourite sneakers..."
+                    aria-label="Search shoes by name or brand"
+                >
+
+            </div>
+            <div class="filter-buttons">
+                
+
+    <button type="button" class="filter-btn active" data-filter="all">All</button>
+
+    <button type="button" class="filter-btn" data-filter="casual">Casual</button>
+
+    <button type="button" class="filter-btn" data-filter="sports">Sports</button>
+
+    <button type="button" class="filter-btn" data-filter="boots">Boots</button>
+
+</div>
+
+
+            <!-- All Shoe Cards Must Stay Inside This Grid -->
+            <div class="shoes-grid">
+
+                <!-- Shoe 1 -->
+                <div class="shoe-card" data-category="casual">
+
+                    <img
+                        src="https://i.pinimg.com/736x/33/4b/ab/334babc1b0e0e6576c351f4f220019e1.jpg"
+                        alt="Mary Jane shoes"
+                    >
+
+                    <h3>Mary Jane <br> shoes</h3>
+
+                    <p>Brand: Puma</p>
+
+                    <a
+                        href="https://in.puma.com/in/en/pd/speedcat-womens-ballet-shoes/401287?size=0150&swatch=01&utm_source=GGL-DDA&utm_medium=DSP&utm_campaign=DSP_GGL_DDA_IN_PMAX_V2_agency_1000067495857508873&gad_source=1&gad_campaignid=24329200691&gclid=CjwKCAjwl4HXBhAjEiwAHlpWhIl3TVXU0IUByz9YTvOXU2OfD62L4f8rUgYOxfKuDukUkSJlXzIUgBoCPmAQAvD_BwE"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >Explore Shoe</a>
+
+                </div>
+
+
+                <!-- Shoe 2 -->
+                <div class="shoe-card" data-category="sports">
+
+                    <img
+                        src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/e/b/eb661c9Nike-HQ3157-100_1.jpg?rnd=20200526195200&tr=w-512"
+                        alt="Nike Tiempo Maestro Elite football boots"
+                    >
+
+                    <h3>Nike Tiempo Maestro Elite</h3>
+
+                    <p>Brand: Nike</p>
+
+                    <a
+                        href="https://www.nike.in/nike-tiempo-maestro-elite-firm-ground-low-top-football-boots/p/29404204?intcmp=nykaa:other:nike-desktop-homepage:default:fresh-drops:PRODUCT_WIDGET_V3:3::-1:product_id:29404204:pdp&pagesource=productWidget:nike-desktop-homepage:fresh-drops"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >Explore Shoe</a>
+
+                </div>
+
+
+                <!-- Shoe 3 -->
+                <div class="shoe-card" data-category="casual">
+
+                    <img
+                        src="https://converse.in/cdn/shop/files/a17564_a-web.jpg?v=1785513837&width=1200"
+                        alt="Converse Omega Trainer SE"
+                    >
+
+                    <h3>Converse Omega Trainer SE</h3>
+
+                    <p>Brand: Converse</p>
+
+                    <a
+                        href="https://converse.in/products/converse-converse-omega-trainer-se-blue-a17564c?variant=43027778404423"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >Explore Shoe</a>
+
+                </div>
+
+
+                
+<!-- Shoe 4 -->
+<div class="shoe-card" data-category="boots">
+
+    <img
+        src="https://images.asos-media.com/products/dr-martens-rodeo-fringe-pull-on-boots-in-dark-brown-suede/211089588-1-brown?$n_1920w$&wid=1926&fit=constrain"
+        alt="Dr. Martens Rodeo fringe pull-on boots"
+    >
+
+    <h3>Rodeo fringe pull-on boots</h3>
+
+    <p>Brand: Dr Martens</p>
+
+    <a
+        href="https://www.asos.com/dr-martens/dr-martens-rodeo-fringe-pull-on-boots-in-dark-brown-suede/prd/211089588#colourWayId-211089595"
+        target="_blank"
+        rel="noopener noreferrer"
+    >Explore Shoe</a>
+
+</div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- Brands Section -->
+        <section id="brands">
+
+            <h2>Explore Brands</h2>
+
+            <a href="https://www.nike.com/" target="_blank" rel="noopener noreferrer">Nike</a>
+
+            <a href="https://www.adidas.co.in/" target="_blank" rel="noopener noreferrer">Adidas</a>
+
+            <a href="https://in.puma.com/" target="_blank" rel="noopener noreferrer">Puma</a>
+
+            <a href="https://www.converse.com/" target="_blank" rel="noopener noreferrer">Converse</a>
+
+        </section>
+
+
+        <!-- About Section -->
+        <section id="about">
+
+            <h2>About KOSOKO</h2>
+
+            <p>A little corner of the internet for shoes worth discovering.</p>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
