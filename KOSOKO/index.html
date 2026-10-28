@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,6 +23,7 @@
             <a href="#shoes">Shoes</a>
             <a href="#brands">Brands</a>
             <a href="#about">About</a>
+            <a href="#" id="cart-link">Cart (<span id="cart-count">0</span>)</a>
         </nav>
 
     </header>
@@ -29,14 +31,25 @@
     <main>
 
         <!-- Welcome Section -->
-        <section class="hero">
+        
+<section class="hero">
+    <video class="hero-video" autoplay muted loop playsinline>
+        <source src="videos/kosoko-banner.mp4" type="video/mp4">
+    </video>
 
-            <h2>Feet deserves fashion.</h2>
+    <div class="hero-overlay"></div>
 
-            <p>A place where fashion is for our BELOVED feets.</p>
+    <span class="hero-tag">YOUR NEXT FAVOURITE PAIR AWAITS ♡</span>
 
-        </section>
+    <h2>
+        Good shoes.<br>
+        <span>Great moods.</span>
+    </h2>
 
+    <p>A little corner of the internet for shoes worth falling in love with.</p>
+
+    <a href="#shoes" class="hero-btn">Find your pair ↗</a>
+</section>
 
         <!-- Shoe Collection -->
         <section class="shoes-section" id="shoes">
@@ -45,34 +58,48 @@
 
             <!-- Search Bar -->
             <div class="search-container">
-
                 <input
                     type="text"
                     id="shoe-search"
                     placeholder="Search your favourite sneakers..."
                     aria-label="Search shoes by name or brand"
                 >
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="filter-buttons">
+
+                <button type="button" class="filter-btn active" data-filter="all">
+                    All Shoes
+                </button>
+
+                <button type="button" class="filter-btn" data-filter="casual">
+                    Casual
+                </button>
+
+                <button type="button" class="filter-btn" data-filter="sports">
+                    Sports
+                </button>
+
+                <button type="button" class="filter-btn" data-filter="boots">
+                    Boots
+                </button>
+
+                <button type="button" class="filter-btn" data-filter="favourites">
+                    ♡ Favourites
+                </button>
 
             </div>
-            <div class="filter-buttons">
-                
 
-    <button type="button" class="filter-btn active" data-filter="all">All</button>
-
-    <button type="button" class="filter-btn" data-filter="casual">Casual</button>
-
-    <button type="button" class="filter-btn" data-filter="sports">Sports</button>
-
-    <button type="button" class="filter-btn" data-filter="boots">Boots</button>
-
-</div>
-
-
-            <!-- All Shoe Cards Must Stay Inside This Grid -->
+            <!-- Shoe Cards -->
             <div class="shoes-grid">
 
                 <!-- Shoe 1 -->
                 <div class="shoe-card" data-category="casual">
+
+                    <button type="button" class="favourite-btn"
+                        aria-label="Add Mary Jane shoes to favourites"
+                        aria-pressed="false">♡</button>
 
                     <img
                         src="https://i.pinimg.com/736x/33/4b/ab/334babc1b0e0e6576c351f4f220019e1.jpg"
@@ -80,20 +107,27 @@
                     >
 
                     <h3>Mary Jane <br> shoes</h3>
-
                     <p>Brand: Puma</p>
 
-                    <a
-                        href="https://in.puma.com/in/en/pd/speedcat-womens-ballet-shoes/401287?size=0150&swatch=01&utm_source=GGL-DDA&utm_medium=DSP&utm_campaign=DSP_GGL_DDA_IN_PMAX_V2_agency_1000067495857508873&gad_source=1&gad_campaignid=24329200691&gclid=CjwKCAjwl4HXBhAjEiwAHlpWhIl3TVXU0IUByz9YTvOXU2OfD62L4f8rUgYOxfKuDukUkSJlXzIUgBoCPmAQAvD_BwE"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >Explore Shoe</a>
+                    <div class="shoe-card-actions">
+                        <a
+                            href="https://in.puma.com/in/en/pd/speedcat-womens-ballet-shoes/401287?size=0150&swatch=01&utm_source=GGL-DDA&utm_medium=DSP&utm_campaign=DSP_GGL_DDA_IN_PMAX_V2_agency_1000067495857508873&gad_source=1&gad_campaignid=24329200691&gclid=CjwKCAjwl4HXBhAjEiwAHlpWhIl3TVXU0IUByz9YTvOXU2OfD62L4f8rUgYOxfKuDukUkSJlXzIUgBoCPmAQAvD_BwE"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >Explore Shoe</a>
+
+                        <button type="button" class="add-to-cart-btn"
+                            aria-label="Add to cart">+</button>
+                    </div>
 
                 </div>
 
-
                 <!-- Shoe 2 -->
                 <div class="shoe-card" data-category="sports">
+
+                    <button type="button" class="favourite-btn"
+                        aria-label="Add Nike shoes to favourites"
+                        aria-pressed="false">♡</button>
 
                     <img
                         src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/e/b/eb661c9Nike-HQ3157-100_1.jpg?rnd=20200526195200&tr=w-512"
@@ -101,20 +135,27 @@
                     >
 
                     <h3>Nike Tiempo Maestro Elite</h3>
-
                     <p>Brand: Nike</p>
 
-                    <a
-                        href="https://www.nike.in/nike-tiempo-maestro-elite-firm-ground-low-top-football-boots/p/29404204?intcmp=nykaa:other:nike-desktop-homepage:default:fresh-drops:PRODUCT_WIDGET_V3:3::-1:product_id:29404204:pdp&pagesource=productWidget:nike-desktop-homepage:fresh-drops"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >Explore Shoe</a>
+                    <div class="shoe-card-actions">
+                        <a
+                            href="https://www.nike.in/nike-tiempo-maestro-elite-firm-ground-low-top-football-boots/p/29404204?intcmp=nykaa:other:nike-desktop-homepage:default:fresh-drops:PRODUCT_WIDGET_V3:3::-1:product_id:29404204:pdp&pagesource=productWidget:nike-desktop-homepage:fresh-drops"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >Explore Shoe</a>
+
+                        <button type="button" class="add-to-cart-btn"
+                            aria-label="Add to cart">+</button>
+                    </div>
 
                 </div>
 
-
                 <!-- Shoe 3 -->
                 <div class="shoe-card" data-category="casual">
+
+                    <button type="button" class="favourite-btn"
+                        aria-label="Add Converse shoes to favourites"
+                        aria-pressed="false">♡</button>
 
                     <img
                         src="https://converse.in/cdn/shop/files/a17564_a-web.jpg?v=1785513837&width=1200"
@@ -122,44 +163,52 @@
                     >
 
                     <h3>Converse Omega Trainer SE</h3>
-
                     <p>Brand: Converse</p>
 
-                    <a
-                        href="https://converse.in/products/converse-converse-omega-trainer-se-blue-a17564c?variant=43027778404423"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >Explore Shoe</a>
+                    <div class="shoe-card-actions">
+                        <a
+                            href="https://converse.in/products/converse-converse-omega-trainer-se-blue-a17564c?variant=43027778404423"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >Explore Shoe</a>
+
+                        <button type="button" class="add-to-cart-btn"
+                            aria-label="Add to cart">+</button>
+                    </div>
 
                 </div>
 
+                <!-- Shoe 4 -->
+                <div class="shoe-card" data-category="boots">
 
-                
-<!-- Shoe 4 -->
-<div class="shoe-card" data-category="boots">
+                    <button type="button" class="favourite-btn"
+                        aria-label="Add Rodeo boots to favourites"
+                        aria-pressed="false">♡</button>
 
-    <img
-        src="https://images.asos-media.com/products/dr-martens-rodeo-fringe-pull-on-boots-in-dark-brown-suede/211089588-1-brown?$n_1920w$&wid=1926&fit=constrain"
-        alt="Dr. Martens Rodeo fringe pull-on boots"
-    >
+                    <img
+                        src="https://images.asos-media.com/products/dr-martens-rodeo-fringe-pull-on-boots-in-dark-brown-suede/211089588-1-brown?$n_1920w$&wid=1926&fit=constrain"
+                        alt="Dr. Martens Rodeo fringe pull-on boots"
+                    >
 
-    <h3>Rodeo fringe pull-on boots</h3>
+                    <h3>Rodeo fringe pull-on boots</h3>
+                    <p>Brand: Dr Martens</p>
 
-    <p>Brand: Dr Martens</p>
+                    <div class="shoe-card-actions">
+                        <a
+                            href="https://www.asos.com/dr-martens/dr-martens-rodeo-fringe-pull-on-boots-in-dark-brown-suede/prd/211089588#colourWayId-211089595"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >Explore Shoe</a>
 
-    <a
-        href="https://www.asos.com/dr-martens/dr-martens-rodeo-fringe-pull-on-boots-in-dark-brown-suede/prd/211089588#colourWayId-211089595"
-        target="_blank"
-        rel="noopener noreferrer"
-    >Explore Shoe</a>
+                        <button type="button" class="add-to-cart-btn"
+                            aria-label="Add to cart">+</button>
+                    </div>
 
-</div>
-
+                </div>
 
             </div>
 
         </section>
-
 
         <!-- Brands Section -->
         <section id="brands">
@@ -167,21 +216,16 @@
             <h2>Explore Brands</h2>
 
             <a href="https://www.nike.com/" target="_blank" rel="noopener noreferrer">Nike</a>
-
             <a href="https://www.adidas.co.in/" target="_blank" rel="noopener noreferrer">Adidas</a>
-
             <a href="https://in.puma.com/" target="_blank" rel="noopener noreferrer">Puma</a>
-
             <a href="https://www.converse.com/" target="_blank" rel="noopener noreferrer">Converse</a>
 
         </section>
-
 
         <!-- About Section -->
         <section id="about">
 
             <h2>About KOSOKO</h2>
-
             <p>A little corner of the internet for shoes worth discovering.</p>
 
         </section>
